@@ -10,69 +10,78 @@ import AVKit
 
 class OneController: UIViewController {
 
-    
-    @IBOutlet weak var btnOne: UIButton!
-    
-    let arrData:Array<People> = []
+    let MAIN = "Main"
+    let USER = "User"
+    let SUBJECT = "Subject"
+    let LESSON = "Lesson"
+    let EXERCISE = "Exercise"
+
+    @IBOutlet weak var vMain: UIView!
+
+    @IBOutlet weak var btnTab2: UIButton!
+
+    @IBOutlet weak var btnTab1: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        initData();
-        
+
+        btnTab1.setOnClickListener {
+            self.onClickTab(self.MAIN, false)
+        }
+
+        btnTab2.setOnClickListener {
+            self.onClickTab(self.USER, false)
+        }
     }
-    
-    
-    func initData(){
+
+    var fragmentHome: SecondController? = nil
+    var fragmentUser: ThreeController? = nil
+
+    func onClickTab(_ tag: String, _ isBack: Bool) {
+
+        print("onClickTab " + tag)
         
-//        arrData = getData();
-        /// set dât vào colection
+        var selectedFragment: UIViewController? = nil
+
+        switch (tag) {
+        case MAIN:
+            if (fragmentHome == nil) {
+                let storyboard = UIStoryboard(name: "Second", bundle: nil)
+                fragmentHome = storyboard.instantiateViewController(withIdentifier: "Second") as? SecondController
+                vMain.addView(fragmentHome!.view!)
+            }
+            selectedFragment = fragmentHome
+            break
+        case USER:
+            if (fragmentUser == nil) {
+                let storyboard = UIStoryboard(name: "Three", bundle: nil)
+                fragmentUser = storyboard.instantiateViewController(withIdentifier: "Three") as? ThreeController
+                vMain.addView(fragmentUser!.view!)
+            }
+            selectedFragment = fragmentUser
+            break
+        default:
+            break
+
+        }
+        
+        
+        fragmentHome?.view.isHidden = true
+        fragmentHome?.view.isUserInteractionEnabled = false
+        
+        fragmentUser?.view.isHidden = true
+        fragmentUser?.view.isUserInteractionEnabled = false
+
+        selectedFragment?.view.isHidden = false
+        selectedFragment?.view.isUserInteractionEnabled = true
+
     }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        
-        let people = arrData[indexPath.row]
-        
-        let cell = SubjectHolder()
-        
-        cell.people = people
-        cell.mSelf = self
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arrData.count
-    }
-    
-    
-    
-    @IBAction func onClickOne(_ sender: Any) {
-        
-        let people = People()
-        people.name = "Iam iron man"
-        people.age = "18 year old"
-        
-        
-        print("name : " + people.name)
-        
-        let storyboard = UIStoryboard(name: "Second", bundle: nil)
-        let secondController = storyboard.instantiateViewController(withIdentifier: "Second") as! SecondController
-        
-        secondController.people = people
-        
-        let controller = UINavigationController(rootViewController: secondController)
-        controller.modalTransitionStyle = .crossDissolve
-        controller.modalPresentationStyle = .fullScreen
-        
-        self.present(controller, animated: true, completion: nil)
-        
-    }
+
 }
 
 
-class SubjectHolder : UICollectionViewCell {
-    
+class SubjectHolder: UICollectionViewCell {
+
     var mSelf: UIViewController!
 
     var imvAvatar: UIImageView!

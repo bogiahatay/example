@@ -10,6 +10,17 @@ import Nuke
 import ObjectMapper
 import Alamofire
 
+
+class SubjectCell {
+
+    var label1: UILabel?
+    var label2: UILabel?
+    var label3: UILabel?
+    var label4: UILabel?
+
+    var abc = false
+}
+
 class SplashController: UIViewController {
 
 
@@ -17,11 +28,11 @@ class SplashController: UIViewController {
 
     @IBOutlet weak var imvImage: UIImageView!
 
-    
+
     @IBOutlet weak var constraintHeight: NSLayoutConstraint!
-    
+
     @IBOutlet weak var vExpand: UIView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,20 +43,31 @@ class SplashController: UIViewController {
 
     @IBAction func onClickApi(_ sender: Any) {
 
-        if( self.constraintHeight.constant == 0){
+        if(self.constraintHeight.constant == 0) {
             self.constraintHeight.constant = 200
         } else {
             self.constraintHeight.constant = 0
         }
-        
+
 //
         self.vExpand.setNeedsLayout()
 
         UIView.animate(withDuration: 1) {
             self.vExpand.superview?.layoutIfNeeded()
         }
- 
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondController = storyboard.instantiateViewController(withIdentifier: "Main") as! OneController
+
+//        secondController.people = people
+
+        let controller = UINavigationController(rootViewController: secondController)
+        controller.modalTransitionStyle = .crossDissolve
+        controller.modalPresentationStyle = .fullScreen
+
+        self.present(controller, animated: true, completion: nil)
         
+
 //        var param: [String: String] = [:]
 //
 //        param["class_id"] = "9"

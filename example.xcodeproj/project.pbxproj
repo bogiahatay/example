@@ -84,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				03D6DEAC2A4699E100913DAD /* extension */,
-				037645B82A43F9F500336D9D /* OneController.swift */,
 				03D6DEB52A46A79A00913DAD /* SplashController.swift */,
+				037645B82A43F9F500336D9D /* OneController.swift */,
 				034B36A92A459E6900028783 /* SecondController.swift */,
 				034B36AD2A45A07400028783 /* ThreeController.swift */,
 				037645BF2A43F9F800336D9D /* LaunchScreen.storyboard */,

@@ -29,7 +29,6 @@ class SecondController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var btnBack: UIButton!
     @IBOutlet weak var btnGoto: UIButton!
     
-    
     @IBOutlet weak var btnImage: UIImageView!
     @IBOutlet weak var vView: UIView!
     
@@ -38,23 +37,20 @@ class SecondController: UIViewController, UIGestureRecognizerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        btnTest.text = people.name
-        
-        
-        
-        self.navigationController?.hidesBottomBarWhenPushed = true
-        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
-        
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
-    
-        vView.setOnClickListener {
-            print("vView.setOnClickListener")
-        }
-        
-        btnImage.setOnClickListener {
-            print("btnImage.setOnClickListener")
-        }
+//
+//
+//        self.navigationController?.hidesBottomBarWhenPushed = true
+//        self.navigationController?.interactivePopGestureRecognizer?.delegate = self
+//
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+//    
+//        vView.setOnClickListener {
+//            print("vView.setOnClickListener")
+//        }
+//
+//        btnImage.setOnClickListener {
+//            print("btnImage.setOnClickListener")
+//        }
      }
     
     @IBAction func onClickBack(_ sender: Any) {

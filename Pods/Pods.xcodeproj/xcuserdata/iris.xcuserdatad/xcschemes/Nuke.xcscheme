@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "062A64896E847A6749F58B6BA9A931B1"
-               BuildableName = "libNuke.a"
+               BuildableName = "Nuke.framework"
                BlueprintName = "Nuke"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

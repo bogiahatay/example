@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03485B6E2A5E4ED6001ADD6E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03485B6D2A5E4ED6001ADD6E /* GoogleService-Info.plist */; };
+		03485B712A5E5101001ADD6E /* CloudMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03485B702A5E5101001ADD6E /* CloudMessage.swift */; };
 		034B36AA2A459E6900028783 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034B36A92A459E6900028783 /* SecondController.swift */; };
 		034B36AC2A459E9600028783 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 034B36AB2A459E9600028783 /* Second.storyboard */; };
 		034B36AE2A45A07400028783 /* ThreeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 034B36AD2A45A07400028783 /* ThreeController.swift */; };
@@ -17,16 +19,24 @@
 		037645BC2A43F9F600336D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037645BA2A43F9F600336D9D /* Main.storyboard */; };
 		037645BE2A43F9F800336D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037645BD2A43F9F800336D9D /* Assets.xcassets */; };
 		037645C12A43F9F800336D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037645BF2A43F9F800336D9D /* LaunchScreen.storyboard */; };
+		0396AF122A5FB3EB003BE4B3 /* ExOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0396AF112A5FB3EB003BE4B3 /* ExOther.swift */; };
 		03CAB72D2A46EE8D00A3C692 /* ExCollectionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03CAB72C2A46EE8D00A3C692 /* ExCollectionVIew.swift */; };
 		03D6DEAE2A4699F100913DAD /* ExView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D6DEAD2A4699F100913DAD /* ExView.swift */; };
 		03D6DEB02A469AFE00913DAD /* SubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D6DEAF2A469AFE00913DAD /* SubjectCell.xib */; };
 		03D6DEB22A469B6E00913DAD /* ExColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D6DEB12A469B6E00913DAD /* ExColor.swift */; };
 		03D6DEB42A46A6D700913DAD /* SplashLayout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D6DEB32A46A6D700913DAD /* SplashLayout.storyboard */; };
 		03D6DEB62A46A79A00913DAD /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D6DEB52A46A79A00913DAD /* SplashController.swift */; };
-		66BD104B23461462B5FA5360 /* libPods-example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A9AA3E4290DD84BA4B2FDEA /* libPods-example.a */; };
+		03F3C41C2A585765008ED7A6 /* MySharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3C41B2A585765008ED7A6 /* MySharedPreferences.swift */; };
+		03F3C41E2A5857B5008ED7A6 /* DataLocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3C41D2A5857B5008ED7A6 /* DataLocalManager.swift */; };
+		03F3C4202A585867008ED7A6 /* ExArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3C41F2A585867008ED7A6 /* ExArray.swift */; };
+		03F3C4222A585A34008ED7A6 /* ExJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3C4212A585A34008ED7A6 /* ExJson.swift */; };
+		59EB57E23C3129DCC9ED101B /* Pods_example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6190E54B04EC17B537C784CE /* Pods_example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03485B6D2A5E4ED6001ADD6E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		03485B702A5E5101001ADD6E /* CloudMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudMessage.swift; sourceTree = "<group>"; };
+		03485B722A5E56A6001ADD6E /* example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = example.entitlements; sourceTree = "<group>"; };
 		034B36A92A459E6900028783 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		034B36AB2A459E9600028783 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
 		034B36AD2A45A07400028783 /* ThreeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeController.swift; sourceTree = "<group>"; };
@@ -39,14 +49,19 @@
 		037645BD2A43F9F800336D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		037645C02A43F9F800336D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		037645C22A43F9F800336D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0396AF112A5FB3EB003BE4B3 /* ExOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExOther.swift; sourceTree = "<group>"; };
 		03CAB72C2A46EE8D00A3C692 /* ExCollectionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExCollectionVIew.swift; sourceTree = "<group>"; };
 		03D6DEAD2A4699F100913DAD /* ExView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExView.swift; sourceTree = "<group>"; };
 		03D6DEAF2A469AFE00913DAD /* SubjectCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubjectCell.xib; sourceTree = "<group>"; };
 		03D6DEB12A469B6E00913DAD /* ExColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExColor.swift; sourceTree = "<group>"; };
 		03D6DEB32A46A6D700913DAD /* SplashLayout.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashLayout.storyboard; sourceTree = "<group>"; };
 		03D6DEB52A46A79A00913DAD /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		03F3C41B2A585765008ED7A6 /* MySharedPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySharedPreferences.swift; sourceTree = "<group>"; };
+		03F3C41D2A5857B5008ED7A6 /* DataLocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLocalManager.swift; sourceTree = "<group>"; };
+		03F3C41F2A585867008ED7A6 /* ExArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExArray.swift; sourceTree = "<group>"; };
+		03F3C4212A585A34008ED7A6 /* ExJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExJson.swift; sourceTree = "<group>"; };
 		3D8080B8C0126748981DA1A7 /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.debug.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
-		4A9AA3E4290DD84BA4B2FDEA /* libPods-example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6190E54B04EC17B537C784CE /* Pods_example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9DFDEFC1ADF0B089F604A35 /* Pods-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-example.release.xcconfig"; path = "Target Support Files/Pods-example/Pods-example.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,13 +70,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66BD104B23461462B5FA5360 /* libPods-example.a in Frameworks */,
+				59EB57E23C3129DCC9ED101B /* Pods_example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03485B6F2A5E50E4001ADD6E /* firebase */ = {
+			isa = PBXGroup;
+			children = (
+				03485B702A5E5101001ADD6E /* CloudMessage.swift */,
+			);
+			path = firebase;
+			sourceTree = "<group>";
+		};
 		037645A82A43F9F500336D9D = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +106,9 @@
 		037645B32A43F9F500336D9D /* example */ = {
 			isa = PBXGroup;
 			children = (
+				03485B722A5E56A6001ADD6E /* example.entitlements */,
+				03485B6F2A5E50E4001ADD6E /* firebase */,
+				03F3C41A2A585756008ED7A6 /* database */,
 				03D6DEAC2A4699E100913DAD /* extension */,
 				03D6DEB52A46A79A00913DAD /* SplashController.swift */,
 				037645B82A43F9F500336D9D /* OneController.swift */,
@@ -94,6 +120,7 @@
 				034B36AB2A459E9600028783 /* Second.storyboard */,
 				034B36AF2A45A09100028783 /* Three.storyboard */,
 				037645BD2A43F9F800336D9D /* Assets.xcassets */,
+				03485B6D2A5E4ED6001ADD6E /* GoogleService-Info.plist */,
 				037645C22A43F9F800336D9D /* Info.plist */,
 				037645B42A43F9F500336D9D /* AppDelegate.swift */,
 				037645B62A43F9F500336D9D /* SceneDelegate.swift */,
@@ -108,8 +135,20 @@
 				03D6DEAD2A4699F100913DAD /* ExView.swift */,
 				03D6DEB12A469B6E00913DAD /* ExColor.swift */,
 				03CAB72C2A46EE8D00A3C692 /* ExCollectionVIew.swift */,
+				03F3C41F2A585867008ED7A6 /* ExArray.swift */,
+				03F3C4212A585A34008ED7A6 /* ExJson.swift */,
+				0396AF112A5FB3EB003BE4B3 /* ExOther.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		03F3C41A2A585756008ED7A6 /* database */ = {
+			isa = PBXGroup;
+			children = (
+				03F3C41B2A585765008ED7A6 /* MySharedPreferences.swift */,
+				03F3C41D2A5857B5008ED7A6 /* DataLocalManager.swift */,
+			);
+			path = database;
 			sourceTree = "<group>";
 		};
 		1221745BC775F2E907730CA9 /* Pods */ = {
@@ -124,7 +163,7 @@
 		6A63CCDD68417C11C06F8D95 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4A9AA3E4290DD84BA4B2FDEA /* libPods-example.a */,
+				6190E54B04EC17B537C784CE /* Pods_example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -140,6 +179,7 @@
 				037645AD2A43F9F500336D9D /* Sources */,
 				037645AE2A43F9F500336D9D /* Frameworks */,
 				037645AF2A43F9F500336D9D /* Resources */,
+				7A52E4425B4C375F182D425A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -189,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				034B36B02A45A09100028783 /* Three.storyboard in Resources */,
+				03485B6E2A5E4ED6001ADD6E /* GoogleService-Info.plist in Resources */,
 				034B36AC2A459E9600028783 /* Second.storyboard in Resources */,
 				03D6DEB42A46A6D700913DAD /* SplashLayout.storyboard in Resources */,
 				037645C12A43F9F800336D9D /* LaunchScreen.storyboard in Resources */,
@@ -201,6 +242,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7A52E4425B4C375F182D425A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-example/Pods-example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-example/Pods-example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-example/Pods-example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B924BBC4F9D73498BF28A039 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -234,11 +292,17 @@
 				03D6DEB22A469B6E00913DAD /* ExColor.swift in Sources */,
 				037645B92A43F9F500336D9D /* OneController.swift in Sources */,
 				034B36AA2A459E6900028783 /* SecondController.swift in Sources */,
+				0396AF122A5FB3EB003BE4B3 /* ExOther.swift in Sources */,
 				037645B52A43F9F500336D9D /* AppDelegate.swift in Sources */,
+				03F3C41C2A585765008ED7A6 /* MySharedPreferences.swift in Sources */,
 				03D6DEAE2A4699F100913DAD /* ExView.swift in Sources */,
 				03CAB72D2A46EE8D00A3C692 /* ExCollectionVIew.swift in Sources */,
+				03F3C4222A585A34008ED7A6 /* ExJson.swift in Sources */,
+				03F3C4202A585867008ED7A6 /* ExArray.swift in Sources */,
 				037645B72A43F9F500336D9D /* SceneDelegate.swift in Sources */,
 				034B36AE2A45A07400028783 /* ThreeController.swift in Sources */,
+				03F3C41E2A5857B5008ED7A6 /* DataLocalManager.swift in Sources */,
+				03485B712A5E5101001ADD6E /* CloudMessage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,8 +448,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = example/example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2W6JLM2Y9P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -412,8 +478,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = example/example.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2W6JLM2Y9P;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = example/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

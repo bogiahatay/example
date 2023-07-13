@@ -36,38 +36,43 @@ class SplashController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        Nuke.loadImage(with: "https://icdn.24h.com.vn/upload/2-2023/images/2023-06-25/cxaaaaa-1687674586-517-width740height369.jpg", into: imvImage)
     }
 
 
 
     @IBAction func onClickApi(_ sender: Any) {
-
-        if(self.constraintHeight.constant == 0) {
-            self.constraintHeight.constant = 200
-        } else {
-            self.constraintHeight.constant = 0
-        }
-
+        print("onClickApi")
+        postDelay(5000, {
+            print("end delay")
+            Nuke.loadImage(with: "https://icdn.24h.com.vn/upload/2-2023/images/2023-06-25/cxaaaaa-1687674586-517-width740height369.jpg", into: self.imvImage)
+        })
+        
+//        if(self.constraintHeight.constant == 0) {
+//            self.constraintHeight.constant = 200
+//        } else {
+//            self.constraintHeight.constant = 0
+//        }
 //
-        self.vExpand.setNeedsLayout()
-
-        UIView.animate(withDuration: 1) {
-            self.vExpand.superview?.layoutIfNeeded()
-        }
-
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondController = storyboard.instantiateViewController(withIdentifier: "Main") as! OneController
-
-//        secondController.people = people
-
-        let controller = UINavigationController(rootViewController: secondController)
-        controller.modalTransitionStyle = .crossDissolve
-        controller.modalPresentationStyle = .fullScreen
-
-        self.present(controller, animated: true, completion: nil)
+////
+//        self.vExpand.setNeedsLayout()
+//
+//        UIView.animate(withDuration: 1) {
+//            self.vExpand.superview?.layoutIfNeeded()
+//        }
+//
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let secondController = storyboard.instantiateViewController(withIdentifier: "Main") as! OneController
+//
+////        secondController.people = people
+//
+//        let controller = UINavigationController(rootViewController: secondController)
+//        controller.modalTransitionStyle = .crossDissolve
+//        controller.modalPresentationStyle = .fullScreen
+//
+//        self.present(controller, animated: true, completion: nil)
         
 
+        
 //        var param: [String: String] = [:]
 //
 //        param["class_id"] = "9"
@@ -121,8 +126,12 @@ class SubjectModel: Mappable {
 
     func mapping(map: Map) {
         nameSubjects <- map["title"]
+        nameSubjects <- map["title2"]
+        
+
         imageSubjects <- map["image"]
         subjectMini <- map["subject_mini"]
+
     }
 
 }

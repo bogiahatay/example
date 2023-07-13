@@ -12,16 +12,16 @@ class SecondController: UIViewController, UIGestureRecognizerDelegate {
     //Đây là code vào main
     static func start(_ mSelf: UIViewController,_ people: People){
 
-        let storyboard = UIStoryboard(name: "Second", bundle: nil)
-        let secondController = storyboard.instantiateViewController(withIdentifier: "Second") as! SecondController
-        
-        secondController.people = people
-        
-        let controller = UINavigationController(rootViewController: secondController)
-        controller.modalTransitionStyle = .crossDissolve
-        controller.modalPresentationStyle = .fullScreen
-        
-        mSelf.present(controller, animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "Second", bundle: nil)
+//        let secondController = storyboard.instantiateViewController(withIdentifier: "Second") as! SecondController
+//
+//        secondController.people = people
+//
+//        let controller = UINavigationController(rootViewController: secondController)
+//        controller.modalTransitionStyle = .crossDissolve
+//        controller.modalPresentationStyle = .fullScreen
+//
+//        mSelf.present(controller, animated: true, completion: nil)
     }
 
     
@@ -32,6 +32,8 @@ class SecondController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var btnImage: UIImageView!
     @IBOutlet weak var vView: UIView!
     
+    var mSelf: UIViewController!
+
     
     var people: People!
     
@@ -51,6 +53,9 @@ class SecondController: UIViewController, UIGestureRecognizerDelegate {
 //        btnImage.setOnClickListener {
 //            print("btnImage.setOnClickListener")
 //        }
+        
+        btnTest.text = MySharedPreferences.getStringValue("ABC")
+
      }
     
     @IBAction func onClickBack(_ sender: Any) {
@@ -65,10 +70,13 @@ class SecondController: UIViewController, UIGestureRecognizerDelegate {
     
     //đi tất cả màn hình
     @IBAction func onClickGoto(_ sender: Any) {
+        
+//        SecondController.start(mSelf, T##people: People##People)
+        
         let storyboard = UIStoryboard(name: "Three", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Three") as! ThreeController
         
-        self.navigationController?.pushViewController(controller, animated: true)
+        mSelf?.navigationController?.pushViewController(controller, animated: true)
         
     }
      

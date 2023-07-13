@@ -7,6 +7,11 @@
 
 import UIKit
 import AVKit
+import SwiftEventBus
+
+class MessageBus{
+    var abc = ""
+}
 
 class OneController: UIViewController {
 
@@ -21,17 +26,34 @@ class OneController: UIViewController {
     @IBOutlet weak var btnTab2: UIButton!
 
     @IBOutlet weak var btnTab1: UIButton!
-
+    @IBOutlet weak var vEx: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         btnTab1.setOnClickListener {
-            self.onClickTab(self.MAIN, false)
+//            self.onClickTab(self.MAIN, false)
+            let event = MessageBus()
+            event.abc = "456"
+            SwiftEventBus.post("KEY_BUS", sender: event)
         }
 
         btnTab2.setOnClickListener {
             self.onClickTab(self.USER, false)
         }
+        
+//        vEx.conner = 10
+        vEx.layer.cornerRadius = 10
+        
+        
+        
+        SwiftEventBus.onMainThread(self, name: "KEY_BUS") { result in
+            // UI thread
+            let event = result!.object as! MessageBus
+            print("msg " + event.abc)
+            
+        }
+        
     }
 
     var fragmentHome: SecondController? = nil
@@ -48,6 +70,7 @@ class OneController: UIViewController {
             if (fragmentHome == nil) {
                 let storyboard = UIStoryboard(name: "Second", bundle: nil)
                 fragmentHome = storyboard.instantiateViewController(withIdentifier: "Second") as? SecondController
+                fragmentHome!.mSelf = self
                 vMain.addView(fragmentHome!.view!)
             }
             selectedFragment = fragmentHome
